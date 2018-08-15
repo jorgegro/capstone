@@ -1,0 +1,21 @@
+.tittle {
+    font-size: .75in;
+    margin-top: 1in;
+    margin-bottom: .5in;
+  }
+  
+  .left {
+    margin-left: 1.3in;
+  }
+  
+  .back{
+    background-color: #BBC3C6;
+    background-size: cover;
+    height: 100vh;
+    
+  }
+  .inbox{
+    width: 3in;
+    margin: auto;
+  }
+ 

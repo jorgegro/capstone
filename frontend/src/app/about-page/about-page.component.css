@@ -1,0 +1,44 @@
+.background {
+    background: #BBC3C6;
+} 
+
+.navbar {
+   background-color: #962715;
+}
+
+.moto {
+   position: relative;
+   margin-top: 300px; 
+}
+
+.pictures {
+    float: left;
+}
+
+.name {
+  margin-left: 0px;
+  font-size: 20px;
+}
+
+.footer {
+    background-color: #231f20;
+    color: #828386;
+    display: block;
+    min-height: 150px;
+    padding: 50px 0;
+}
+
+.column-block {
+    float: left;
+
+}
+
+.row,p {
+    margin-left: 100px;
+}
+
+.card-img-overlay {
+    /* border: 5px solid black; */
+    padding: 0;
+    margin-top: 80px;
+}

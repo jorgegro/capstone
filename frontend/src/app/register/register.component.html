@@ -1,0 +1,27 @@
+<div class="back">
+  <div class="container">
+    <div class="row text-center">
+      <!-- LOGIN SECTION -->
+      <div class="col pt-5 ">
+        <div class="tittle text-center">Sign In</div>
+        <form (submit)="onLoginSubmit()" >
+          <div class="form-group px-5">
+            <label for="exampleDropdownFormEmail1">Username</label>
+            <br>
+            <input type="username" [(ngModel)]="username" name="username" class="form-control inbox"  placeholder="@username">
+          </div>
+          <div class="form-group px-5">
+            <label for="exampleDropdownFormPassword1">Password</label>
+            <br>
+            <input type="password" [(ngModel)]="password" name="password" class="form-control inbox" id="exampleDropdownFormPassword1" placeholder="Password" required>
+          </div>
+          <a class="nav-link" routerLink="/register">Create a new acount?</a>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Sign In</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

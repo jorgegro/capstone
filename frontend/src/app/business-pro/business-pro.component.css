@@ -1,0 +1,67 @@
+  .back {
+    background: #bbc3c6;
+    height: 150vh;
+  }
+  .jumbotron {
+      background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATkAAAChCAMAAACLfThZAAAAOVBMVEXw8PC5ubm4uLjFxcXz8/Pp6em/v7/s7OzHx8fLy8vd3d3k5OTg4ODo6OjCwsK9vb3Pz8/T09PY2NjWlKeXAAAD90lEQVR4nO2d4XKrIBBGFREViRjf/2Fv1JhGQVQKye3ynU7/pWE4wwosK80yAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAvUUXm2/2LRHVTfRGVXt0oyivvLD75nZ66W83y+DDWlN/uaWDKj4gb3RFTV/Wf8TbSf7uzIeFSTEMu9lNuakOob3c3JP0sTjdR0XMr92/3NiDVbC5XZVTkPOh6QvPrPLGyLnY73dRMfYvdzudon12K3U4xNVO0sdv5HDDnC8z5AnO+wJwvO+Y457fHb7h2UjGn6nHhr2sZrJ00zKli2S4xEcpdEuYG/ZM8YXoI004K5u7sPevE8jB7zQTMqW6drmNChZgo6Jsrm22ekzUhtun0zUkzH6mHAIOOvLkl6bQadCFSueTNtZ3FXB2gv/TNCYu57jgJXg43d0jTN6fN59yJ44Oq1407aZmAOduYO+pv1T/WfW519M3ZovUoBz6Jy3PncSp5c+Zy7sSJ1SzOrY68OZ/1XPP6pGPNTN/c7eoegr/9Aat3P0rfXCY3sytzDzm+Mr2fW07AHB9Wg47l9/PiRjc7H0zAnJGfuyJu/8w7CXNcds8KnVx37hSTbSa2q0vCXMazoRZaC1HLg1nVVnlnD9g0zI1HX1Wrqsrtba/yzjrDpmLuDGVjFzd+m7kkJmtub0rcx1kka+4myJq7WgXGD8qym23SiZ455WXuSJypDuYmuLlHO1JHz1xbXDd3POJMdfTMKXHd3Mk3KFbqCJo7ilZl7CJOv3ryro6euaNoHUTRrtVV59/ZeUuw0zMn3dEqH7v/tbqquPCy08+6jp4593pOTnnylTrLgayD126CoDlHtPJZ3Hj49VJnOeFxwRZV9Mw5opXLxRLrns96fm3EkTa3H60/4l7qeH5RXJrm5LslJh7TJLccY6drbjda5drSqO7iM464ub0ZQm4Dk4nusjfS5nb2EIMZmOz6iKNtzhqtFnF+EDZnjdZg4iibs0Xr4DEVwFwWVBxlc2a0hhRH2Zwx5oKKS8hcFVYcZXObaLXVCcOclc16ToUVR9pcB3N+bKIV5k4jEa2etIhWT2DOF0SrL5ghfDGiNTB0zW2itRXd7ynmnxFB19w2VxLivmr++Fm+bvleeub8ajavQ9CcR/2cD/TM+dRs+kDPHKLVl0+Zq8mZa+cu6ZC39JnwubKC1M3p1bM+v5dRUO3Mfd5RULqJOVuuExJxeC6On5sxSrd/LzfOR75yfm6C1o3zmeUOq0iQunA+w3/W+AVV7VXgddVbmBsA/y+41HGfciP64M32vwnnqq+j0rcUvU3wyHy7fwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB2/gGXwUtWSmjXqAAAAABJRU5ErkJggg==');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 400px;
+      margin-bottom: 0;
+      border-radius: 0;
+  }
+  .mininav {
+      height: 100px;
+      background-color: #96271d;
+      box-shadow: 0 3px 3px 0 grey;
+  }
+  .ProfileAvatar {
+    background: black;
+    border: 5px solid black;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+ }
+ .ProfileBox {
+    height: 200px;
+    width: 200px;
+    margin-left: 200px;
+    margin-top: -150px;
+ }
+ .in {
+     display: inline-block;
+     padding-left: 20px;
+     padding-right: 20px;
+ }
+ .iny {
+     display: block;
+ }
+ span {
+     color: white;
+ }
+ .btn {
+     margin-bottom: 35px;
+     margin-left: 200px;
+ }
+ .iny-btn {
+     display: inline-block;
+     padding-left: 80px;
+ }
+ .nav-items {
+     text-align: center;
+     padding-left: 340px;
+     padding-top: 30px;
+ }
+ .container {
+     margin-left: 200px;
+     float: left;
+     padding-top: 30px;
+     width: 250px;
+ }
+ .right-container {
+     height: 200px;
+     width: 675px;
+     background: grey;
+     float: left;
+     margin-left: 100px;
+ }

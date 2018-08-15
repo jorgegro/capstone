@@ -1,0 +1,54 @@
+<div class="back">
+  <div class="container inbox">
+  <div class="row">
+    <div class="col pt-5">
+      <div class="tittle text-center"> New Account </div>
+      <form (submit)="onRegisterSubmit()">
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationServer01">Name</label>
+            <input type="text" class="form-control" [(ngModel)]="name" name="name" placeholder="First and Last Name" value="name" required>
+          </div>         
+          <div class="col-md-6 mb-3">
+            <label for="validationServerUsername">Username</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">@</span>
+              </div>
+              <input [(ngModel)]="username" name="username" type="text" class="form-control" placeholder="Username" aria-describedby="inputGroupPrepend3"
+                required>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input [(ngModel)]="email" name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input [(ngModel)]="password" name="password" type="password" class="form-control" placeholder="Password">
+            </div>
+          </div>
+        </div>
+        <div class="form-group text-center">
+          <div class="form-check">
+            <input class="form-check-input is-invalid" type="checkbox" value="" required>
+            <label class="form-check-label" for="invalidCheck3">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+          <button class="btn btn-primary mt-2" type="submit">Submit form</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

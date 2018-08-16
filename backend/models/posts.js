@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const config = require('../config/keys');
+// var fs = require(‘fs’);
 
 //Post Schema
 
@@ -23,6 +24,10 @@ const PostSchema = mongoose.Schema({
     time: {
         type: String,
         require: true
+    },
+    postPic: { 
+        data: Buffer,
+        contentType: String 
     }
 })
 

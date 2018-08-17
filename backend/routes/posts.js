@@ -13,5 +13,12 @@ router.get('/', function(req, res, next){
 
 // New post
 
-router.post ('/new')
+router.post ('/new', function(req, res, next){
+    let newPost = new Post({
+    title: req.body.title,
+    description: req.body.description,
+    date: req.body.date,
+    time: req.body.time
+    })
+});
   module.exports = router;

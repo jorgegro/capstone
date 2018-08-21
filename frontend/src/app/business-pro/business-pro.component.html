@@ -36,7 +36,7 @@
        <div class="row">
       <div class="col-sm">
        <h2>{{user.name}}</h2>
-       <h4>{{user.username}}</h4>
+       <h4>@{{user.username}}</h4>
       </div>
       <br>
       <div class="col-sm">
@@ -51,7 +51,18 @@
      </div>
     </div>
          <div class="right-container border col-sm">
-           
+           <div class="mt-3">
+            <input type="text" class="form-control" placeholder="Title of Event">
+           </div>
+           <div class="mt-3">
+            <textarea type="text" class="form-control des" placeholder="Information of Event"></textarea>
+           </div>
+           <div class="mt-3 left">
+            <input type="datetime-local" class="form-control" id="myDate">
+           </div>
+           <div class="mt-3 right">
+            <button class="form-control btn-outline-light" type="submit">Submit</button>
+           </div>
          </div>
 </div>
 

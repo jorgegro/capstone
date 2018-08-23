@@ -1,58 +1,71 @@
 <div class="back">
-    <div class="jumbotron bg-dark">
-  
-    </div>
-    <div class="mininav">
-      <ul class="nav-items">
-        <li class="in">
-          <a class="iny">
-            <span class="iny">Events</span>
-            <span class="iny">0</span>
-          </a>
-        </li>
-        <li class="in">
-          <a class="iny">
-            <span class="iny">Following</span>
-            <span class="iny">0</span>
-          </a>
-        </li>
-        <li class="in">
-          <a>
-            <span class="iny">Followers</span>
-            <span class="iny">0</span>
-          </a>
-        </li>
-        <li class="iny-btn">
-          <button class="btn">
-            Edit Profile
-          </button>
-        </li>
-      </ul>
-    </div>
-        <div class="ProfileBox">
-          <img class="ProfileAvatar" src="https://myspace.com/common/images/user.png">
-        </div>
-    <div class="container"> 
-       <div class="row">
+  <div class="jumbotron bg-dark">
+
+  </div>
+  <div class="mininav">
+    <ul class="nav-items">
+      <li class="in">
+        <a class="iny">
+          <span class="iny">Events</span>
+          <span class="iny">0</span>
+        </a>
+      </li>
+      <li class="in">
+        <a class="iny">
+          <span class="iny">Following</span>
+          <span class="iny">0</span>
+        </a>
+      </li>
+      <li class="in">
+        <a>
+          <span class="iny">Followers</span>
+          <span class="iny">0</span>
+        </a>
+      </li>
+      <li class="iny-btn">
+        <button class="btn">
+          Edit Profile
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div class="ProfileBox">
+    <img class="ProfileAvatar" src="https://myspace.com/common/images/user.png">
+  </div>
+  <div class="container">
+    <div class="row">
       <div class="col-sm">
-       <h2>{{user.name}}</h2>
-       <h4>{{user.username}}</h4>
+        <h2>{{user.name}}</h2>
+        <h4>@{{user.username}}</h4>
       </div>
       <br>
       <div class="col-sm">
-          <br>
-       <h6>
-         Bio:
-       </h6>
-      <p>
-       This is about you, yourself and you. What if I put more here would it get out the box or go under????????????
-      </p>      
+        <br>
+        <h6>
+          Bio:
+        </h6>
+        <p>
+          This is about you, yourself and you. What if I put more here would it get out the box or go under????????????
+        </p>
       </div>
-     </div>
     </div>
-         <div class="right-container border col-sm">
-           
-         </div>
+  </div>
+  <div class="right-container border col-sm">
+    <form (submit)="onPostSubmit()">
+      <div class="mt-3">
+        <input [(ngModel)]="title" name="title" type="text" class="form-control" placeholder="Title of Event">
+      </div>
+      <div class="mt-3">
+        <textarea [(ngModel)]="description" name="description" type="text" class="form-control des" placeholder="Information of Event"></textarea>
+      </div>
+      <div class="mt-3 left">
+        <input [(ngModel)]="date" name="date" type="datetime-local" class="form-control" id="myDate">
+      </div>
+      <div class="mt-3 right">
+        <button class="form-control btn-outline-light" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
 </div>
 
 <!-- <div *ngIf="user">

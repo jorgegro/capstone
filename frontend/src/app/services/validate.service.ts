@@ -20,4 +20,8 @@ export class ValidateService {
     
     return re.test(String(email).toLowerCase());
   }
+
+  validateEmailDb(email){
+    
+  }
 }

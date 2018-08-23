@@ -6,13 +6,46 @@
    background-color: #962715;
 }
 
-.moto {
-   position: relative;
-   margin-top: 300px; 
+.picture2 {
+    width: 600px;
+   height: 400px;
+   position: absolute;
+   left: 10px;
+   top: 45px;
+   margin-left: 250px; 
 }
 
-.pictures {
-    float: left;
+.picture1 {
+   width: 800px;
+   height: 500px;
+   opacity: 0.5;
+   filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.moto {
+   position: relative;
+   font-family: 'Montserrat Alternates', sans-serif;
+   text-shadow: 3px 4px #ccc9c9;
+}
+
+.rgv {
+   color: orange;
+   text-shadow: 3px 4px #ccc9c9;
+}
+
+.weAre {
+    text-shadow: 3px 4px #ccc9c9;
+}
+
+.middle {
+  transition: .3s ease;
+  opacity: 0;
+  position: absolute;
+  margin-right: 0px;
+}
+
+.container:hover .middle {
+  opacity: 2;
 }
 
 .name {

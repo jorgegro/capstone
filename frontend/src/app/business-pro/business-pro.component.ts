@@ -56,7 +56,6 @@ export class BusinessProComponent implements OnInit {
         this.router.navigate(['/BusinessPro']);
       }
     });
-
   }
 
 

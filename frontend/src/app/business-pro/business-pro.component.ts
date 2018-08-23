@@ -37,12 +37,12 @@ export class BusinessProComponent implements OnInit {
       description: this.description,
       date: this.date
     }
-    this.authService.authenticateUser(post).subscribe(data => {
+    this.authService.newPost(post).subscribe(data => {
       if(data.success){
         this.authService.storeUserData(data.token, data.user);
         swal({
           type: 'success',
-          title: 'You are logged in!',
+          title: 'Yosu made a post!',
           timer: 3000,
         });
         this.router.navigate(['/BusinessPro']);
@@ -50,10 +50,10 @@ export class BusinessProComponent implements OnInit {
         swal({
           type: 'error',
           title: 'Oops...',
-          text: data.msg,
+          text: 'Something went wrong!',
           timer: 3000,
         });
-        this.router.navigate(['/login']);
+        this.router.navigate(['/BusinessPro']);
       }
     });
 

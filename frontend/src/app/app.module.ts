@@ -22,6 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CalendarModule } from 'angular-calendar';
+
 export function tokenGetter() {
   return localStorage.getItem('id_token');
 }
@@ -41,6 +44,7 @@ export function tokenGetter() {
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    CalendarModule.forRoot(),
     FlashMessagesModule.forRoot(),
     SweetAlert2Module.forRoot(),
     JwtModule.forRoot({

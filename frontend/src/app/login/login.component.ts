@@ -55,6 +55,7 @@ export class LoginComponent implements OnInit {
       });
       return false;
    }
+   
 
    //Register User
     this.authService.registerUser(user).subscribe(data => {
@@ -70,7 +71,7 @@ export class LoginComponent implements OnInit {
         swal({
           type: 'error',
           title: 'Oops...',
-          text: 'Something went wrong!',
+          text: data.msg,
           timer: 3000,
         });
       }

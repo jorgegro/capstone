@@ -59,9 +59,22 @@
      width: 250px;
  }
  .right-container {
-     height: 200px;
+     height: 350px;
      width: 675px;
      background: grey;
      float: left;
      margin-left: 100px;
+     border-radius: 10px;
+ }
+ .des {
+     height: 200px;
+ }
+ .left {
+     float: left;
+ }
+ .right {
+     float: right;
+ }
+ textarea {
+     resize: none;
  }

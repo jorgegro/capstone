@@ -3,7 +3,7 @@ var router = express.Router();
 const config = require('../config/keys');
 
 
-const Posts = require('../models/posts');
+const Post = require('../models/posts');
 
 router.get('/', function(req, res, next){
     // res.send('respond with a resource');
@@ -13,5 +13,29 @@ router.get('/', function(req, res, next){
 
 // New post
 
-router.post ('/new')
-  module.exports = router;
+router.post ('/new', function(req, res, next){
+    let newPost = new Post({
+    title: req.body.title,
+    description: req.body.description,
+    date: req.body.date
+    });
+     
+    Post.addPost(newPost, (err, post) => {
+        if(err){
+            res.json({success: false, msg: 'Failled to post new'});
+        } else {
+            res.json({success: true, msg: 'Post created correctly'});
+        }
+    });
+});
+
+module.exports.getUserById = (id, callback) =>{
+    Post.findById(id, callback)
+}
+
+module.exports.getPostByUsername = (username, callback) =>{
+    const query = {username: username}
+    Post.findOne(query, callback);
+}
+
+module.exports = router;

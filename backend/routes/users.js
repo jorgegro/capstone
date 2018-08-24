@@ -16,21 +16,33 @@ router.get('/', function(req, res, next){
 // Register
 
 router.post ('/register', function(req, res, next){
-  let newUser = new User({
-    name: req.body.name,
-    email: req.body.email,
-    username: req.body.username,
-    password: req.body.password
-  });
 
-  User.addUser(newUser, (err, user) => {
-     if(err){
-       res.json({success: false, msg: 'Failled to register user'});
-     } else {
-       res.json({success: true, msg: 'User registered'});
-     }
-  });
-});
+  User.find({ $or: [ {username: req.body.username }, {email: req.body.email} ] }).then(user => {
+    console.log(user);
+    if(user.length < 1){
+      const newUser = new User({
+        name: req.body.name,
+        email: req.body.email,
+        username: req.body.username,
+        password: req.body.password
+      })
+      
+      User.addUser(newUser, (err, user) => {
+        if(err){
+          res.json({success: false, msg: 'Failed to register user'});
+        } else {
+          res.json({success: true, msg: 'User registered'});
+        }
+     });
+    } else {
+      res.json({success: false, msg: 'Email or Username already exist'});
+      
+    }
+  })
+  
+  
+
+  })
 
 // Authenticate
 

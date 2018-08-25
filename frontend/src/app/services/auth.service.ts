@@ -22,7 +22,7 @@ export class AuthService {
       .pipe(map(res => res.json()));
   }
 
-  //User
+  //Use
 
   registerUser(user) {
     let headers = new Headers();

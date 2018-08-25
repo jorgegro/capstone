@@ -53,6 +53,22 @@
   font-size: 20px;
 }
 
+.lastRow {
+   text-align: center;
+   font-size: 50px;
+   position: relative;
+   font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.AllLastRow {
+    text-align: center;
+    
+}
+
+button {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
 .footer {
     background-color: #231f20;
     color: #828386;
@@ -70,8 +86,3 @@
     margin-left: 100px;
 }
 
-.card-img-overlay {
-    /* border: 5px solid black; */
-    padding: 0;
-    margin-top: 80px;
-}

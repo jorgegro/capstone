@@ -23,7 +23,7 @@
         </a>
       </li>
       <li class="iny-btn">
-        <button class="btn">
+        <button (click)="showPro()" class="btn">
           Edit Profile
         </button>
       </li>
@@ -35,8 +35,8 @@
   <div class="container">
     <div class="row">
       <div class="col-sm">
-        <h2>{{user.name}}</h2>
-        <h4>@{{user.username}}</h4>
+        <!-- <h2>{{user.name}}</h2>
+        <h4>@{{user.username}}</h4> -->
       </div>
       <br>
       <div class="col-sm">

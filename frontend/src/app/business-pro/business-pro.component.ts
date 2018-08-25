@@ -22,14 +22,22 @@ export class BusinessProComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.authService.getProfile().subscribe(profile => {
-      this.user = profile.user;
-    },
-    err => {
-      console.log(err);
-      return false;
-  });
+  //   this.authService.getProfile().subscribe(profile => {
+  //     this.user = profile.user;
+  //     console.log(this.user);
+  //   },
+  //   err => {
+  //     console.log(err);
+  //     return false;
+  // });
   }
+
+  //profile user is being undefined becuase the calling will not wait for the 
+  //information that is being sent therefore the error is occuring.
+
+  // showPro(){
+  //   this.user;
+  // }
 
   onPostSubmit(){
     const post = {
@@ -39,7 +47,6 @@ export class BusinessProComponent implements OnInit {
     }
     this.authService.newPost(post).subscribe(data => {
       if(data.success){
-        this.authService.storeUserData(data.token, data.user);
         swal({
           type: 'success',
           title: 'Yosu made a post!',

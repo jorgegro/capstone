@@ -9,6 +9,7 @@
       height: 400px;
       margin-bottom: 0;
       border-radius: 0;
+      position: relative;
   }
   .mininav {
       height: 100px;
@@ -21,6 +22,7 @@
     border-radius: 50%;
     height: 200px;
     width: 200px;
+    position: relative;
  }
  .ProfileBox {
     height: 200px;

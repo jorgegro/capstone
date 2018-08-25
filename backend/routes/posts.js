@@ -8,9 +8,18 @@ const config = require('../config/keys');
 const Post = require('../models/posts');
 
 router.get('/', function(req, res, next){
-    // res.send('respond with a resource');
-    res.send('post routing works');
-  
+    return Post.find().then(posts => {
+        res.send(posts);
+    });
+});
+
+router.get('/:id', function(req, res){
+    // 08/20/2018
+    return Post.find({
+        date: req.param.id
+    }.then(posts => {
+        res.send(posts);
+    }));
 });
 
 // New post
@@ -37,6 +46,7 @@ router.post ('/new', passport.authenticate('jwt', {session: false}), (req, res, 
         }
     });
 });
+
 
 module.exports.getUserById = (id, callback) =>{
     Post.findById(id, callback)

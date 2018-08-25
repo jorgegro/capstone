@@ -15,8 +15,7 @@ const PostSchema = mongoose.Schema({
      location:{
         type: String,
         require: true
-     },   
-    
+     },
     date: {
         type: String,
         require: true

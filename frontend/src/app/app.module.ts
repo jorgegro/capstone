@@ -18,8 +18,9 @@ import { LocaleService } from './services/locale.service';
 import { ValidateService } from './services/validate.service';
 import { AuthService } from './services/auth.service';
 import { JwtModule } from '@auth0/angular-jwt';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
+import { AuthinterceptorService } from './services/authinterceptor.service';
 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -41,6 +42,7 @@ export function tokenGetter() {
   ],
   imports: [
     HttpModule,
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -56,6 +58,11 @@ export function tokenGetter() {
     })
   ],
   providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthinterceptorService,
+      multi: true
+    },
     LocaleService,
     ValidateService,
     AuthService

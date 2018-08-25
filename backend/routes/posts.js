@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+const passport = require ('passport');
+const jwt = require('jsonwebtoken');
 const config = require('../config/keys');
 
 
@@ -13,11 +15,18 @@ router.get('/', function(req, res, next){
 
 // New post
 
-router.post ('/new', function(req, res, next){
+router.post ('/new', passport.authenticate('jwt', {session: false}), (req, res, next)=>{
+    //what PASSPORT.authenticate does, is that it attaches the authenticated user to the req objet
+    //so, you can see it from here: req.user
     let newPost = new Post({
+        
     title: req.body.title,
     description: req.body.description,
-    date: req.body.date
+    location: req.body.location,
+    date: req.body.date,
+    time: req.body.time,
+    userId: req.user._id
+
     });
      
     Post.addPost(newPost, (err, post) => {

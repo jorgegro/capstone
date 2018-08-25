@@ -10,46 +10,32 @@ import { TimeInterval } from 'rxjs/internal/operators/timeInterval';
   styleUrls: ['./business-pro.component.css']
 })
 export class BusinessProComponent implements OnInit {
-  user: Object;
+  public user={};
 
-  title: String;
-  description: String;
-  date: String;
-
+  public postData={};
+  
   constructor(
     private authService:AuthService,
     private router:Router,
-  ) { }
-
-  ngOnInit() {
-  //   this.authService.getProfile().subscribe(profile => {
-  //     this.user = profile.user;
-  //     console.log(this.user);
-  //   },
-  //   err => {
-  //     console.log(err);
-  //     return false;
-  // });
+  ) { 
   }
 
-  //profile user is being undefined becuase the calling will not wait for the 
-  //information that is being sent therefore the error is occuring.
-
-  // showPro(){
-  //   this.user;
-  // }
+  ngOnInit() {
+    this.authService.getProfile().subscribe(profile => {
+      this.user = profile.user;
+    },
+    err => {
+      console.log(err);
+      return false;
+  });
+  }
 
   onPostSubmit(){
-    const post = {
-      title: this.title,
-      description: this.description,
-      date: this.date
-    }
-    this.authService.newPost(post).subscribe(data => {
+    this.authService.newPost(this.postData).subscribe(data => {
       if(data.success){
         swal({
           type: 'success',
-          title: 'Yosu made a post!',
+          title: 'You made a post!',
           timer: 3000,
         });
         this.router.navigate(['/BusinessPro']);

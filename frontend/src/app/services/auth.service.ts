@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
 import { map } from 'rxjs/operators';
 import { JwtHelperService } from '@auth0/angular-jwt'
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,38 +14,36 @@ export class AuthService {
   user: any;
   post: any;
 
-  constructor(private http: Http, private jwtHelper: JwtHelperService) { }
+  constructor(private jwtHelper: JwtHelperService, private _http:HttpClient) { 
+    this.loadToken();
+  }
 
-  newPost(post){
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/posts/new', post, { headers: headers })
-      .pipe(map(res => res.json()));
+  newPost(post) : Observable<any>{
+    //let headers = new Headers();
+    //headers.append('Content-Type', 'application/json');
+    return this._http.post('http://localhost:3000/posts/new', post);
   }
 
   //Use
 
-  registerUser(user) {
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/users/register', user, { headers: headers })
-      .pipe(map(res => res.json()));
+  registerUser(user) : Observable<any>{
+    //let headers = new Headers();
+    //headers.append('Content-Type', 'application/json');
+    return this._http.post('http://localhost:3000/users/register', user);
   }
 
-  authenticateUser(user) {
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/users/authenticate', user, { headers: headers })
-      .pipe(map(res => res.json()));
+  authenticateUser(user): Observable<any> {
+    //let headers = new Headers();
+    //headers.append('Content-Type', 'application/json');
+    return this._http.post('http://localhost:3000/users/authenticate', user);
   }
 
-  getProfile() {
-    let headers = new Headers();
-    this.loadToken();
-    headers.append('Authorization', this.authToken);
-    headers.append('Content-Type', 'application/json');
-    return this.http.get('http://localhost:3000/users/profile', { headers: headers })
-      .pipe(map(res => res.json()));
+  getProfile() : Observable<any> {
+    //let headers = new Headers();
+    //this.loadToken();
+    //headers.append('Authorization', this.authToken);
+    //headers.append('Content-Type', 'application/json');
+    return this._http.get('http://localhost:3000/users/profile');
   }
 
   storeUserData(token, user) {
@@ -57,6 +56,10 @@ export class AuthService {
   loadToken() {
     const token = localStorage.getItem('id_token');
     this.authToken = token;
+  }
+
+  getToken(){
+    return this.authToken;
   }
 
   loggedIn(){

@@ -12,9 +12,21 @@ const PostSchema = mongoose.Schema({
         type: String,
         require: true
     },
+     location:{
+        type: String,
+        require: true
+     },
     date: {
         type: String,
-        require: true,
+        require: true
+    },
+    time: {
+        type: String,
+        require: true
+    },
+    userId:{
+        type: String,
+        require: true
     }
 });
 

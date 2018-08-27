@@ -23,7 +23,7 @@
         </a>
       </li>
       <li class="iny-btn">
-        <button class="btn">
+        <button (click)="showPro()" class="btn">
           Edit Profile
         </button>
       </li>
@@ -50,25 +50,28 @@
       </div>
     </div>
   </div>
+
   <div class="right-container border col-sm">
     <form (submit)="onPostSubmit()">
       <div class="mt-3">
-        <input [(ngModel)]="title" name="title" value="title" type="text" class="form-control" placeholder="Title of Event">
+        <input [(ngModel)]="postData.title" name="title" type="text" class="form-control" placeholder="Title of Event">
       </div>
       <div class="mt-3">
-        <textarea [(ngModel)]="description" name="description" type="text" value="description" class="form-control des" placeholder="Information of Event"></textarea>
+        <textarea [(ngModel)]="postData.description" name="description" type="text" class="form-control des" placeholder="Information of Event"></textarea>
       </div>
       <div class="mt-3 left">
-        <input [(ngModel)]="date" name="date" value="date" type="datetime-local" class="form-control" id="myDate">
+        <input [(ngModel)]="postData.date" name="date" type="date" class="form-control" id="myDate">
+      </div>
+      <div class="mt-3 left">
+        <input [(ngModel)]="postData.time" name="time" type="time" class="form-control" id="myDate">
       </div>
       <div class="mt-3 right">
         <button class="form-control btn-outline-light" type="submit">Submit</button>
       </div>
     </form>
   </div>
-</div>
 
-<!-- <div *ngIf="user">
+  <!-- <div *ngIf="user">
   <h2 class="page-header">{{user.name}}</h2>
   <ul class="listgroup">
     <li class="list-group-item">Username: {{user.username}}</li>

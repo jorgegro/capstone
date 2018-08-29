@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class LocaleService {
 
   event: Object;
-  constructor(public http: HttpClient) { }
+  
   
   getPosts(){
     return this.http.get("http://localhost:3000/posts/posts")
@@ -17,5 +17,10 @@ export class LocaleService {
     this.event = data;
     })
   }
-  
+
+  constructor(
+    public http: HttpClient
+  ) 
+  { }
+
 }

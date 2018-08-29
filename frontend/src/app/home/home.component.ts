@@ -7,11 +7,11 @@ import { LocaleService } from '../services/locale.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
+
   posts: any;
-
-  constructor(public http: HttpClient, public _locale: LocaleService) { }
-
+  postView: {};
   
   ngOnInit() {
     // running the getPosts function in Service
@@ -21,10 +21,18 @@ export class HomeComponent implements OnInit {
   }
 
   showPosts(){
-    console.log("am i working??")
+    console.log("its working!")
     // setting the api call event variable to posts
     return this.posts = this._locale.event;
   }
   
-  
+  constructor(
+    public http: HttpClient,
+    public _locale: LocaleService
+    ) 
+    
+    {
+      this._locale
+     }
+
 }

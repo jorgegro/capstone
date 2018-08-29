@@ -7,7 +7,8 @@ const config = require('../config/keys');
 
 const Post = require('../models/posts');
 
-router.get('/', function(req, res, next){
+// Get All posts route
+router.get('/posts', function(req, res, next){
     return Post.find().then(posts => {
         res.send(posts);
     });

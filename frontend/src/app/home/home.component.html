@@ -51,9 +51,11 @@
     </div> -->
     <div class="col">
       <button class="btn btn-primary" (click)="showPosts()">Show Posts</button>
-      <div *ngFor="let post of posts">{{post.title}}</div>
-      <div *ngFor="let post of posts">{{post.description}}</div>
-      <div *ngFor="let post of posts">{{post.date}}</div>
+      <div *ngFor="let post of posts">
+        {{post.title}}
+        {{post.description}}
+        {{post.date}}
+      </div>
     </div>
     <!-- center boxes -->
   </div>

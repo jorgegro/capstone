@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -18,9 +19,13 @@ export class LocaleService {
     })
   }
 
+
   constructor(
-    public http: HttpClient
+    public http: HttpClient,
+    public router: Router
   ) 
-  { }
+  { 
+    this.router = router
+  }
 
 }

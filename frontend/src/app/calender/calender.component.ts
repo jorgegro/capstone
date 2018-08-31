@@ -3,7 +3,7 @@ import { Component, OnInit, Input,
   EventEmitter,
   TemplateRef } from '@angular/core';
 
-  import { MonthViewDay, CalendarEvent } from 'calendar-utils';
+import { MonthViewDay, CalendarEvent } from 'calendar-utils';
 
 import {Subject} from 'rxjs';
 
@@ -13,6 +13,7 @@ import {Subject} from 'rxjs';
   styleUrls: ['./calender.component.css']
   
 })
+
 export class CalenderComponent implements OnInit {
 
   viewDate: Date;
@@ -25,6 +26,6 @@ export class CalenderComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
+   }
 
 }

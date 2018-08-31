@@ -1,3 +1,8 @@
-.box{
-padding-left: 1in;
+.post {
+    border: 2px solid black;
+    width: 800px;
+    height: 200px;
+
+    
 }
+

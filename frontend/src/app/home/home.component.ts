@@ -8,34 +8,30 @@ import { LocaleService } from '../services/locale.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
  })
+ 
 
 export class HomeComponent implements OnInit {
+
+  constructor(
+    public http: HttpClient,
+    public _locale: LocaleService
+    ) 
+    
+    {
+      
+     }
 
   posts: object;
 
   ngOnInit() {
     // running the getPosts function in Service
     // (which is making the api call)
-    this.posts = this._locale.getPosts();
-    this.posts = this._locale.event;
-   }
-
-  showPosts(){
-    console.log("its working!")
-    // setting the api call event variable to posts
-    return this.posts = this._locale.event;
-    
-   };
-
-  
-  
- constructor(
-    public http: HttpClient,
-    public _locale: LocaleService
-    ) 
-    
-    {
-      this._locale = _locale
-     }
+    return this.http.get("http://localhost:3000/posts/posts")
+    .subscribe(data => {
+    console.log("this is the service call" )
+    console.log(data)
+    this.posts = data;
+    })
+   }  
 
 }

@@ -9,17 +9,6 @@ export class LocaleService {
 
   event: Object;
   
-  
-  getPosts(){
-    return this.http.get("http://localhost:3000/posts/posts")
-    .subscribe(data => {
-    console.log("this is the service call" )
-    console.log(data)
-    this.event = data;
-    })
-  }
-
-
   constructor(
     public http: HttpClient,
     public router: Router

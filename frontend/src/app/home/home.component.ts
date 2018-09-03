@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   constructor(
     public http: HttpClient,
     public _locale: LocaleService
+
     ){ }
 
   posts: object;
@@ -28,4 +29,12 @@ export class HomeComponent implements OnInit {
     })
    }  
 
+   deleteEvents() {
+     this.http.delete("http://localhost:3000/posts/posts")
+     .subscribe(data => {
+       console.log("Delete button")
+       console.log(data)
+     })
+   }
+  
 }

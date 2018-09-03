@@ -5,22 +5,23 @@
 .navbar {
    background-color: #962715;
 }
-
-.picture2 {
-    width: 600px;
-   height: 400px;
-   position: absolute;
-   left: 10px;
-   top: 45px;
-   margin-left: 250px; 
-}
-
 .picture1 {
-   width: 800px;
-   height: 500px;
+   width: 100%;
+   height: 100%;
    opacity: 0.5;
    filter: alpha(opacity=50); /* For IE8 and earlier */
+   margin: 0%;
 }
+
+.picture2 {
+   width: 90%;
+   height: 80%;
+   position: absolute;
+   left: 1%;
+   top: 10%;
+   margin-left: 13%; 
+}
+
 
 .moto {
    position: relative;

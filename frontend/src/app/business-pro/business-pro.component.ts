@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { LocaleService } from '../services/locale.service';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 import swal from 'sweetalert2';
@@ -17,8 +19,12 @@ export class BusinessProComponent implements OnInit {
   constructor(
     private authService:AuthService,
     private router:Router,
+    public http: HttpClient,
+    public _locale: LocaleService
   ) { 
   }
+
+  posts: object;
 
   ngOnInit() {
     this.authService.getProfile().subscribe(profile => {
@@ -27,6 +33,13 @@ export class BusinessProComponent implements OnInit {
     err => {
       console.log(err);
       return false;
+  });
+
+  return this.http.get("http://localhost:3000/posts/posts")
+  .subscribe(data => {
+  console.log("this is the service call" )
+  console.log(data)
+  this.posts = data;
   });
   }
 

@@ -15,11 +15,8 @@ export class HomeComponent implements OnInit {
   constructor(
     public http: HttpClient,
     public _locale: LocaleService
-    ) 
-    
-    {
-      
-     }
+
+    ){ }
 
   posts: object;
 
@@ -28,10 +25,16 @@ export class HomeComponent implements OnInit {
     // (which is making the api call)
     return this.http.get("http://localhost:3000/posts/posts")
     .subscribe(data => {
-    console.log("this is the service call" )
-    console.log(data)
     this.posts = data;
     })
    }  
 
+   deleteEvents() {
+     this.http.delete("http://localhost:3000/posts/posts")
+     .subscribe(data => {
+       console.log("Delete button")
+       console.log(data)
+     })
+   }
+  
 }

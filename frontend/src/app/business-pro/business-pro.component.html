@@ -71,6 +71,26 @@
     </form>
   </div>
 
+  <div class="container">
+      <div class="row post mt-5" *ngFor="let post of posts">
+          <div class="col">
+              {{post.title}}
+          </div>
+          <div class="col">
+            {{post.description}}
+          </div>
+          <div class="col">
+            {{post.date}}
+          </div>
+          <div class="col">
+              {{post.time}}
+          </div>
+          <div>
+            <button  class="form-control btn-primary">Delete</button>
+          </div>
+      </div>
+  </div>
+
   <!-- <div *ngIf="user">
   <h2 class="page-header">{{user.name}}</h2>
   <ul class="listgroup">

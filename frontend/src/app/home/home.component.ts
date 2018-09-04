@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
     // (which is making the api call)
     return this.http.get("http://localhost:3000/posts/posts")
     .subscribe(data => {
+      console.log(data)
     this.posts = data;
     })
    }  

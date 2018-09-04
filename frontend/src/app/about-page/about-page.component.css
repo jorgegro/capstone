@@ -54,19 +54,22 @@
   font-size: 20px;
 }
 
-.lastRow {
-   text-align: center;
-   font-size: 50px;
-   position: relative;
-   font-family: 'Montserrat Alternates', sans-serif;
+.joinUs{
+    position: relative;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 .AllLastRow {
     text-align: center; 
 }
 
-button {
-    font-family: 'Montserrat Alternates', sans-serif;
+.location {
+    position: relative;
+    right: 30%;
+}
+.locale {
+    position: absolute;
+   left: 80%;
 }
 
 .footer {
@@ -76,13 +79,6 @@ button {
     min-height: 150px;
     padding: 50px 0;
 }
+ 
 
-.column-block {
-    float: left;
-
-}
-
-.row,p {
-    margin-left: 100px;
-}
 

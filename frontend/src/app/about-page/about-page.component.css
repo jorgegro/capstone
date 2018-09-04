@@ -65,11 +65,14 @@
 
 .location {
     position: relative;
-    right: 30%;
+    right: 20%;
+    width: 20%;
 }
 .locale {
-    position: absolute;
+   position: absolute;
    left: 80%;
+   text-align: center;
+   width: 20%;
 }
 
 .footer {

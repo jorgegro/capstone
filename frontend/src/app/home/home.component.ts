@@ -38,4 +38,17 @@ export class HomeComponent implements OnInit {
      })
    }
   
+<<<<<<< Updated upstream
 }
+=======
+ constructor(
+    public http: HttpClient,
+    public _locale: LocaleService
+    ) 
+    
+    {
+      this._locale = _locale
+     }
+
+    }
+>>>>>>> Stashed changes

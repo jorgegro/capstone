@@ -24,7 +24,11 @@ export class AuthService {
     return this._http.post('http://localhost:3000/posts/new', post);
   }
 
-  //Use
+  getEvents(usersId) : Observable<any>{
+    return this._http.get(`http://localhost:3000/posts${usersId}`);
+  }
+
+  //User
 
   registerUser(user) : Observable<any>{
     //let headers = new Headers();

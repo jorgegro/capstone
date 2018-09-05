@@ -13,6 +13,7 @@ import { TimeInterval } from 'rxjs/internal/operators/timeInterval';
 })
 export class BusinessProComponent implements OnInit {
   public user={};
+  userEvents=[];
 
   public postData={};
   
@@ -29,16 +30,29 @@ export class BusinessProComponent implements OnInit {
   ngOnInit() {
     this.authService.getProfile().subscribe(profile => {
       this.user = profile.user;
+      this.authService.getEvents(profile.user._id).subscribe(events => {
+        this.userEvents = events;
+      },
+      // error in getting events
+    err => {
+      console.log("events "+ err);
+      return false;
+    });
+      // error in getting profile
     },
     err => {
-      console.log(err);
+      console.log("profile " + err);
       return false;
   });
 
+//   http.post(`http://localhost:3000/posts${usersid}`).subscribe(posts => {
+//  this.userPosts = posts;
+// });
+// this.authService.getEvents(user)
+
   return this.http.get("http://localhost:3000/posts/posts")
   .subscribe(data => {
-  console.log("this is the service call" )
-  console.log(data)
+    console.log(data);
   this.posts = data;
   });
   }

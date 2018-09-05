@@ -1,4 +1,4 @@
-  .back {
+  /* .back {
     background: #bbc3c6;
     height: 150vh;
   }
@@ -79,12 +79,54 @@
  }
  textarea {
      resize: none;
- }
+ } */
 
- .post {
-    border: 2px solid black;
-    width: 70%;
-    height: 20%;
-    position: static;
-    margin:auto;
+  
+  .jumbotron {
+    color: white;
+    text-shadow: #444 0 1px 1px;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+  }
+  .in {
+      display: block;
+      text-align: center;
+  }
+  .ProfileAvatar {
+    background: black;
+    border: 3px solid black;
+    border-radius: 50%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .left {
+    float: left;
+  }
+  .right {
+    float: right;
+  }
+  .ProfileBox {
+    height: 200px;
+    width: 200px;
+    margin-left: 0;
+    margin-top: -50px;
+    margin-bottom: -35px;
+ }
+ .iny {
+     display: block;
+     float: left;
+     max-width: 300px;
+ }
+ .int {
+     float: right;
+ }
+ .des {
+    height: 200px;
+}
+.back {
+    background-color: #962715;
+}
+.inner {
+    text-align: center;
 }

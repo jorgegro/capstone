@@ -10,8 +10,10 @@ const Post = require('../models/posts');
 // Get All posts route
 router.get('/posts', function(req, res, next){
     return Post.find().then(posts => {
-        res.send(posts);
+    res.send(posts);
+    
     });
+    
 });
 
 router.get('/:id', function(req, res){

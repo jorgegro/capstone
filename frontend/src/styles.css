@@ -2,7 +2,3 @@
 /* angular-cli file: src/styles.css */
 @import "../node_modules/angular-calendar/css/angular-calendar.css";
 
-
-#grad {
-    background-image: linear-gradient(#2bc0e4, #ffffff);
-}

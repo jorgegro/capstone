@@ -27,15 +27,29 @@
    position: relative;
    font-family: 'Montserrat Alternates', sans-serif;
    text-shadow: 3px 4px #ccc9c9;
+   font-size: .75in;
 }
 
 .rgv {
    color: orange;
    text-shadow: 3px 4px #ccc9c9;
+   font-size: .75in;
+}
+
+.weAreColum {
+    background-color: rgb(125, 186, 255);
 }
 
 .weAre {
-    text-shadow: 3px 4px #ccc9c9;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: white;
+}
+
+.weAre2{
+    margin-left: 10%;
+    margin-right: 10%;
+    color: white;
 }
 
 .middle {
@@ -65,7 +79,7 @@
 
 .location {
     position: relative;
-    right: 20%;
+    right: 35%;
     width: 20%;
 }
 .locale {

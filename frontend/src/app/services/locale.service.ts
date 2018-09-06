@@ -8,12 +8,8 @@ providedIn: 'root'
 export class LocaleService {
 
   event: Object;
-<<<<<<< Updated upstream
-  
-=======
 
 
->>>>>>> Stashed changes
   constructor(
     public http: HttpClient,
     public router: Router

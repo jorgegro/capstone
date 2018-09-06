@@ -1,10 +1,13 @@
 <div class="container">
 
   <div class="container post mt-5" *ngFor="let post of posts">
-    <div class="row">
-        <h3>
-            Next event: {{post.title}}
+      <div class="row event">
+          <h3 class="event">
+              {{post.title}}
           </h3>
+      </div>
+    <div class="row m-0">
+        <img src="https://increasify.com.au/wp-content/uploads/2016/08/default-image.png" alt="" width="100%">
     </div>
     <div class="row m-3">
       Description: {{post.description}}

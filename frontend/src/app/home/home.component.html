@@ -1,7 +1,6 @@
 <div class="container">
 
-<<<<<<< HEAD
-  <div class="container post mt-5" *ngFor="let post of posts">
+  <div class="container post mt-5" *ngFor="let post of posts?.reverse()">
       <div class="row event">
           <h3 class="event">
               {{post.title}}
@@ -15,15 +14,7 @@
     </div>
 
     <div class="row">
-=======
-  <div class="row post mt-5" *ngFor="let post of posts?.reverse()">
-      <div class="col">
-          Title: {{post.title}}
-      </div>
-      <div class="col">
-        Description: {{post.description}}
-      </div>
->>>>>>> master
+
       <div class="col">
           {{post.date}}
       </div>
